@@ -1,0 +1,103 @@
+.reviews {
+  &__wrapper {
+    display: flex;
+  }
+}
+
+.card {
+  &__header {
+    margin-top: 21px;
+    margin-bottom: 241px;
+  }
+
+  &__hero {
+    padding: 14px 18px;
+    background: url("../img/card-header.png") center center/cover no-repeat;
+    margin-bottom: 11px;
+  }
+
+  &__hero-name {
+    font-size: 10px;
+    font-family: "FontOver";
+    font-weight: 500;
+    line-height: 120%;
+    color: transparent;
+    background: linear-gradient(rgba(105, 254, 219, 1), rgba(17, 229, 179, 1));
+    background-clip: text;
+  }
+
+  &__dna {
+    display: block;
+    margin-bottom: 11px;
+  }
+
+  &__id {
+    display: block;
+    font-size: 7px;
+    font-family: "FontOver";
+    font-weight: 500;
+    line-height: 120%;
+    color: transparent;
+    background: linear-gradient(rgba(105, 254, 219, 1), rgba(17, 229, 179, 1));
+    background-clip: text;
+  }
+
+  &__title {
+    background: url("../img/card-name.png") center center/contain no-repeat;
+    padding: 29px 16px 28px 22px;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 42px;
+    font-family: "Exo20";
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    background: url("../img/card-info.png") center center/contain no-repeat;
+    background-size:100% 100%;
+    padding: 28px 21px 33px 23px;
+  }
+
+  &__info-img {
+    display: block;
+    height: 28px;
+    flex-grow: 0;
+  }
+
+  &__item {
+    margin-bottom: 13px;
+    display: flex;
+    gap: 21px;
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-width: 231px;
+  }
+
+  &__info-title {
+    display: block;
+    color: #11e5b3;
+    font-size: 14px;
+    font-family: "Exo20";
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+  }
+
+  &__info-subtitle {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Exo20";
+    font-weight: 400;
+    line-height: normal;
+  }
+}
