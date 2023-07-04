@@ -1,12 +1,96 @@
 .reviews {
+  &__container {
+    padding: 0 10px;
+  }
+
   &__wrapper {
     display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__slider-pagination {
+    display: flex;
+    max-width: 157px;
+    margin: 0 auto;
+    margin-top: 42px;
+  }
+
+  &__slider-pag {
+    position: inherit;
+    color: #11e5b3;
+    text-align: center;
+    font-size: 16px;
+    font-family: "FontOver";
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 1.6px;
+  }
+
+  &__slider-next img {
+    transform: scale(-1, -1);
   }
 }
 
 .card {
+  position: relative;
+  max-width: 431px;
+  width: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(10, 40, 64, 0.6),
+    rgba(2, 23, 40, 1)
+  );
+  border: 4px solid #224f73;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &:hover,
+  &.swiper-slide-active {
+    border: 4px solid transparent;
+    background: url("../img/active-card-bg.png") center center/cover no-repeat;
+    background-size: 100% 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-image: url("../img/card-active.svg") 0 fill;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__img-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #041b2e 0%, rgba(4, 27, 46, 0) 100%);
+    z-index: 3;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 21px 28px 29px;
+    z-index: 2;
+  }
+
   &__header {
-    margin-top: 21px;
     margin-bottom: 241px;
   }
 
@@ -44,10 +128,14 @@
 
   &__title {
     background: url("../img/card-name.png") center center/contain no-repeat;
-    padding: 29px 16px 28px 22px;
+    background-size: 100% 100%;
+    margin-bottom: 4px;
   }
 
   &__name {
+    margin: 0;
+    display: block;
+    padding: 29px 16px 28px 22px;
     color: #fff;
     font-size: 42px;
     font-family: "Exo20";
@@ -58,8 +146,9 @@
 
   &__info {
     background: url("../img/card-info.png") center center/contain no-repeat;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     padding: 28px 21px 33px 23px;
+    margin-bottom: 10px;
   }
 
   &__info-img {
@@ -99,5 +188,44 @@
     font-family: "Exo20";
     font-weight: 400;
     line-height: normal;
+  }
+
+  &__review {
+    display: flex;
+    align-items: flex-end;
+    background: url("../img/card-bottom.png") left center/cover no-repeat;
+
+    background-size: 100% 100%;
+    max-width: 374px;
+    height: 154px;
+    margin-bottom: 35px;
+  }
+
+  &__review-text {
+    padding: 0 21px 23px 21px;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Exo20";
+    font-weight: 400;
+    line-height: 140%;
+    max-height: 100px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) transparent;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 3px;
+      border: 1px solid transparent;
+    }
   }
 }
