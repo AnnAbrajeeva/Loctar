@@ -12,20 +12,37 @@
     font-size: 32px;
     font-weight: 400;
     line-height: 120%;
+
+    @include tablet {
+      font-size: 18px;
+      max-width: 492px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      max-width: 178px;
+    }
   }
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 10px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 63px;
     max-width: 1160px;
     margin: 0 auto;
+
+    @include small-tablet {
+      gap: 20px;
+    }
   }
 
   &__item {
-    max-height: 50px;
+    height: calc(var(--index) * 5);
+    max-height: 40px;
+    object-fit: contain;
   }
 
   &__content {
@@ -33,6 +50,23 @@
     background: url("../img/clients-bg.png") center center/cover no-repeat;
     height: max-content;
     min-height: 1250px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(248,248,249,0) 100%);
+    }
+
+    @include small-tablet {
+      min-height: calc(var(--index) * 150);
+    }
   }
 
   &__title-wrapper {
@@ -43,9 +77,28 @@
     margin: 0 auto;
     max-width: 1260px;
     width: 100%;
+
+
+    @include small-tablet {
+      height: 50%;
+    }
   }
 
-  &__before {
+  &__desk {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__mob {
+    display: none;
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+  &__desk-img {
     display: block;
     width: 100%;
     height: 100%;
@@ -56,7 +109,7 @@
     }
   }
 
-  &__before-mob {
+  &__mob-img {
     display: none;
 
     @include tablet {
@@ -74,7 +127,7 @@
     color: #fff;
     max-width: 334px;
     text-align: center;
-    font-family: 'Exo20';
+    font-family: "Exo20";
     font-size: 22.58px;
     font-weight: 400;
     line-height: 120%;
@@ -82,5 +135,74 @@
     @include tablet {
       left: 45%;
     }
+
+    @include small-tablet {
+      font-size: calc(var(--index) * 3);
+      width: 100%;
+      top: calc(var(--index) * 20);
+      left: calc(var(--index) * 10);
+    }
+  }
+
+  &__box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    width: calc(var(--index) * 30);
+    padding: calc(var(--index) * 3) 0;
+
+    &--1 {
+      top: 0;
+      right: 20px;
+      background: url("../img/clients-box1.png") center center/cover no-repeat;
+    }
+
+    &--2 {
+      top: 55%;
+      left: 20%;
+      background: url("../img/clients-box2.png") center center/cover no-repeat;
+    }
+
+    &--3 {
+      bottom: calc(var(--index) * 5);
+      left: 5%;
+      background: url("../img/clients-box3.png") center center/cover no-repeat;
+    }
+
+    &--4 {
+      top: 90%;
+      right: 5%;
+      background: url("../img/clients-box2.png") center center/cover no-repeat;
+    }
+  }
+
+  &__box2 {
+    position: absolute;
+    width: calc(var(--index) * 60);
+    height: 108px;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  &__before-mob {
+    display: block;
+    color: #fff;
+    font-family: "Cyberpunk";
+    font-size: calc(var(--index) * 30);
+    font-weight: 400;
+    line-height: 52.036px;
+  }
+
+  &__box-text {
+    font-family: "FontOver";
+    font-size: calc(var(--index) * 2);
+    font-weight: 500;
+    line-height: 120%;
+    background: radial-gradient(rgba(252, 218, 255, 1), rgba(207, 82, 254, 1));
+    color: transparent;
+    background-clip: text;
   }
 }
