@@ -5,8 +5,15 @@
 import { mobileCheck } from "./functions/mobile-check";
 
 import { reviewsSlider } from "./components/reviews-slider";
+import { funcSlider, tabsSlider } from "./components/functions-slider";
 
+const swipeAllSliders = (index) => {
+  funcSlider.slideToLoop(index);
+  tabsSlider.slideToLoop(index);
+};
 
+funcSlider.on('slideChange', () => swipeAllSliders(funcSlider.realIndex));
+tabsSlider.on('slideChange', () => swipeAllSliders(tabsSlider.realIndex));
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
