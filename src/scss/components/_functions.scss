@@ -1,0 +1,108 @@
+.functions {
+  padding-top: 169px;
+  background: url("../img/functions-bg.png") center center/cover no-repeat;
+
+  &__container {
+    padding: 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "Exo20";
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 100%;
+    background: linear-gradient(
+      rgba(115, 229, 198, 1),
+      rgba(129, 121, 239, 1),
+      rgba(207, 82, 254, 1)
+    );
+    color: transparent;
+    background-clip: text;
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-width: 732px;
+    color: #fff;
+    text-align: center;
+    font-family: "Exo20";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  &__header {
+    background: url("../img/functions-header.png") center center/cover no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__header-title {
+    display: block;
+    padding: 43px 0 84px 0;
+    text-align: center;
+    font-family: "FontOver";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+    background: radial-gradient(rgba(252, 218, 255, 1), rgba(207, 82, 254, 1));
+    color: transparent;
+    background-clip: text;
+  }
+
+  &__content {
+    background: url("../img/slider-wrap.png") center center/cover no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+  }
+
+  &__slider {
+    background: url("../img/Slider-bg.png") center center/cover no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 19px 50px 0;
+    width: 369px;
+    height: 854px;
+    transform: skewX(-17deg);
+  }
+
+  &__tab {
+    padding-right: 30px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(
+      90deg,
+      rgba(205, 81, 252, 0) 0%,
+      rgba(204, 81, 250, 0.3) 100%
+    );
+  }
+
+  &__tab-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 13px;
+    height: 100%;
+    transform: skewX(17deg);
+  }
+
+  &__tab-text {
+    max-width: 239px;
+    text-align: right;
+    font-family: "Exo20";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(207, 82, 254, 1));
+    color: transparent;
+    background-clip: text;
+  }
+}
